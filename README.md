@@ -49,7 +49,9 @@ Volume 2, Section 3.2.2
 The algorithm is as follows.
 
 state[n] = state[n-1] - state[n-2]
+
 if (state[n] < 0) state[n] += MOD
+
 where MOD is 10^9
 
 The C code for subrand is available in Rosetta Code.
