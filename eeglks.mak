@@ -27,7 +27,6 @@
 #--------------------------------------------------------
 
 OBJ=eeglks.o \
-	getks.o \
 	treeinit.o \
 	isrt.o \
 	rmtree.o \
@@ -49,9 +48,6 @@ eeglks:				$(OBJ)
 
 eeglks.o:			eeglks.c
 		$(CC) $(CFLAGS) eeglks.c
-
-getks.o:			getks.c
-		$(CC) $(CFLAGS) getks.c
 
 treeinit.o:			treeinit.c
 		$(CC) $(CFLAGS) treeinit.c

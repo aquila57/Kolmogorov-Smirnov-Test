@@ -27,7 +27,6 @@
 #--------------------------------------------------------
 
 OBJ=gslks.o \
-	getks.o \
 	treeinit.o \
 	isrt.o \
 	rmtree.o \
@@ -49,9 +48,6 @@ gslks:				$(OBJ)
 
 gslks.o:			gslks.c
 		$(CC) $(CFLAGS) gslks.c
-
-getks.o:			getks.c
-		$(CC) $(CFLAGS) getks.c
 
 treeinit.o:			treeinit.c
 		$(CC) $(CFLAGS) treeinit.c

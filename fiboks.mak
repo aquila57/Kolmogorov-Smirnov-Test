@@ -19,7 +19,6 @@
    #  Boston, MA 02111-1307, USA.
 
 OBJ=eeglks.o \
-	getks.o \
 	treeinit.o \
 	isrt.o \
 	rmtree.o \
@@ -41,9 +40,6 @@ fiboks:				$(OBJ)
 
 fiboks.o:				fiboks.c
 		$(CC) $(CFLAGS) fiboks.c
-
-getks.o:			getks.c
-		$(CC) $(CFLAGS) getks.c
 
 treeinit.o:			treeinit.c
 		$(CC) $(CFLAGS) treeinit.c

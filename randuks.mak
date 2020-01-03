@@ -27,7 +27,6 @@
 #--------------------------------------------------------
 
 OBJ=randuks.o \
-	getks.o \
 	treeinit.o \
 	isrt.o \
 	rmtree.o \
@@ -49,9 +48,6 @@ randuks:			$(OBJ)
 
 randuks.o:			randuks.c
 		$(CC) $(CFLAGS) randuks.c
-
-getks.o:			getks.c
-		$(CC) $(CFLAGS) getks.c
 
 treeinit.o:			treeinit.c
 		$(CC) $(CFLAGS) treeinit.c
