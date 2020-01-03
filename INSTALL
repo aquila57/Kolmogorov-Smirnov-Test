@@ -1,0 +1,32 @@
+Installing programs for the Kolmogorov-Smirnov test in
+this repository:
+
+The following dependencies are used by the programs in this
+repository.
+
+GNU Scientific Library.
+
+sudo apt-get install libgsl2
+sudo apt-get install libgsl-dev
+sudo apt-get install gsl-ref-html
+
+Dieharder package.
+
+sudo apt-get install dieharder
+sudo apt-get install libdieharder-dev
+sudo apt-get install libdieharder3
+
+Make shell scripts executable.
+
+chmod 755 *.sh
+
+Next compile the programs.
+
+./inst.sh
+
+To de-install the runs test up and down repository:
+
+./deinst.sh
+
+To see how to test runs test programs, read TESTING.
+

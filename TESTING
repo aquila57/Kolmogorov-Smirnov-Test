@@ -1,0 +1,125 @@
+Instructions for running all the tKolmogorov-Smirnov ests
+in this repository.
+
+eegl64 random number generator
+
+Run eeglks to apply the Kolmogorov-Smirnov test for the
+eegl64 uniform random number generator.  There is no
+parameter.  See the template test repository for information
+about the eegl64 generator.
+
+./eeglks
+
+This test is expected to pass the Kolmogorov-Smirnov test.
+
+--------
+
+Knuth subrand generator
+
+Run srandks to apply the Kolmogorov-Smirnov test for the
+subrand random number generator.  There is no parameter.
+
+./srandks
+
+This test fails the Kolmogorov-Smirnov test.
+
+--------
+
+Fibonacci random number generator
+
+Run fiboks to apply the Kolmogorov-Smirnov test
+to the fibonacci random number generator.
+There is no parameter.
+
+./fiboks
+
+This program passes the test.
+
+--------
+
+64 bit LFSR random number generator
+
+Run runslfsr to apply the Kolmogorov-Smirnov test
+to the 64 bit LFSR random number generator.
+There is no parameter.
+
+./lfsrks
+
+This program passes the test.
+
+--------
+
+32 bit RANDU random number generator
+
+Run randuks to apply the Kolmogorov-Smirnov test
+to the 32 bit RANDU random number generator.
+There is no parameter.
+
+./randuks
+
+The RANDU random number generator passes the KS test.
+
+--------
+
+The sine wave random number generator
+
+Run sineks to apply the Kolmogorov-Smirnov test
+to the sine wave random number generator.
+There is no parameter.
+
+./sineks
+
+The sine wave random number generator passes the KS test.
+
+--------
+
+GNU Scientific Library random number generators
+
+Run runall.sh to apply the Kolmogorov-Smirnov test
+to the entire collection of GNU Scientific Library random number
+generators.  There is no parameter for this procedure, but
+the list of random number generators is in a file, called
+allgsl.lst.
+
+./runall.sh
+
+The output from this test is in a file, called allgsl.out.
+You may browse this file to see the results.  See the
+README.md file for the generators which fail this test.
+
+--------
+
+Dieharder package random number generators
+
+Run tstdie.sh to apply the Kolmogorov-Smirnov test to the
+dieharder collection of random number generators.  There
+is one parameter, the number of the dieharder generator.
+
+./tstdie.sh RNG_number
+
+Example,
+
+./tstdie.sh 053
+
+This example runs the test on the dieharder taus2 generator.
+
+To find a list of dieharder random number generators,
+enter the following dieharder command.
+
+dieharder -g -l
+
+See the README.md file for generators that fail the
+Kolmogorov-Smirnov test.
+
+--------
+
+Submit more random number generators.
+
+If you have a random number generator that is not included
+in this repository, you are welcome to add more KS test
+programs to this repository.
+
+For more information about this repository, read README.md
+and INSTALL.
+
+--------
