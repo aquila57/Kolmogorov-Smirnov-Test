@@ -72,8 +72,11 @@ The fibonacci generator is computed in the gen_dbl() function
 in the fiboks.c program.
 
 fibonum1 = fibonum2
+
 fibonum2 = fibonum3
+
 fibonum3 = fibonum1 + fibonum2
+
 fraction = fibonum3 / maxint
 
 fraction is a pseudo random number with a uniform distribution
@@ -93,6 +96,7 @@ LFSR generator used is a 64 bit linear feedback shift register
 with a period length of 2^64.
 
 MYLFSR;
+
 fraction = lfsr / maxint
 
 fraction is a pseudo random number with a uniform distribution
@@ -110,6 +114,7 @@ in the randuks.c program.  RANDU is a 32 bit generator with
 a period length of 2^30.
 
 seed *= 65539;
+
 fraction = seed / maxint
 
 fraction is a pseudo random number with a uniform distribution
@@ -127,7 +132,9 @@ in the sineks.c program.  The sine generator has a long
 enough period length to complete the test.
 
 /* generate a uniform number between zero and PI */
+
 radian = eeglunif(ee) * M_PI;
+
 sinx = sin(radian);
 
 sinx is a pseudo random number with a sine distribution
