@@ -1,9 +1,9 @@
 #!/bin/bash
-make -f eeglks.mak clean
-make -f srandks.mak clean
-make -f fiboks.mak clean
-make -f lfsrks.mak clean
-make -f sineks.mak clean
-make -f randuks.mak clean
-make -f gslks.mak clean
-make -f dieks.mak clean
+make -f eeglks.mak
+make -f srandks.mak
+make -f fiboks.mak
+make -f lfsrks.mak
+make -f sineks.mak
+make -f randuks.mak
+make -f gslks.mak
+make -f dieks.mak
