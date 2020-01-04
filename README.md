@@ -31,7 +31,7 @@ eegl64
 The eegl64 random number generator is explained in the repository
 "eegl64".  That is a random number generator based on a 64 bit
 LFSR with a Bays Durham shuffle.  The period length of the eegl64
-generator approximates 1.2 * 16^61036 generations.  That is a long
+generator approximates 1.2 * 10^61036 generations.  That is a long
 period length, that never terminates, or wraps around.  The eegl64
 generator passes the Kolmogorov-Smirnov test.
 
