@@ -15,6 +15,15 @@
 
 #define MOD (1000000000)
 
+/* 128^3 */
+
+#define CUBESIZE (2097152)
+
+/* modulus for a cube of dots */
+/* there is a 50% chance of a black dot in the cube */
+
+#define CUBEMOD (1048576)
+
 #define EOFKS (-999999999.0)
 
 #define EOFDIE (-999999999.0)
@@ -29,6 +38,7 @@ typedef struct xxstruct {
    char *rngname;
    char dieharder_rngname[128];
    char rngtbl[1000][64];
+   char cube[CUBESIZE];   /* 128^3 */
    int generator;
    int eofsw;
    int state[55];       /* subrand state */

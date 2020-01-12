@@ -27,6 +27,7 @@
 void start_rng(xxfmt *xx)
    {
    xx->ee = (eefmt *) eeglinit();
+   // xx->ee = (eefmt *) eeglstrt(37);
    } /* start_rng */
 
 /* Generate one uniform sample from zero to one */

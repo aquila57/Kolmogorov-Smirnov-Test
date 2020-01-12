@@ -155,6 +155,7 @@ int main(int argc, char **argv)
    xx->rngname = (char *) NULL;
    xx->generator = -1;
    xx->eofsw     = 0;
+   xx->ee = NULL;
    xx->sumx = 0.0;
    xx->dblsmpls = (double) SMPLS;
    xx->deltax = 1.0 / xx->dblsmpls;

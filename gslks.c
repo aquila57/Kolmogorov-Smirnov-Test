@@ -88,7 +88,8 @@ int main(void)
       } /* for each sample */
    if (xx->root->rght != NULL) traverse(xx->root->rght, xx);
    printf("Kolmogorov-Smirnov Test\n");
-   printf("eegl64 Generator\n");
+   printf("GNU Scientific Library: %s "
+      "Generator\n", xx->rngname);
    printf("Maximum difference %f\n", xx->maxdiff);
    printf("Times sqrt(N)      %f\n",
       xx->maxdiff * sqrt(xx->dblsmpls));
