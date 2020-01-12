@@ -1,4 +1,6 @@
 #!/bin/bash
+make -f eegllib.mak
+make -f libks.mak
 make -f eeglks.mak
 make -f srandks.mak
 make -f fiboks.mak

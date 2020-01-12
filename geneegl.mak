@@ -1,4 +1,4 @@
-#  eeglks.mak - Compile eeglks.c Version 0.1.0
+#  geneegl.mak - Generate eegl64 samples  Version 0.1.0
 #  Copyright (C) 2019-2020 aquila57 at github.com
 
 #  This program is free software; you can redistribute it and/or
@@ -26,19 +26,19 @@
 # to 64
 #--------------------------------------------------------
 
-OBJ=eeglks.o
+OBJ=geneegl.o
 
 CC=gcc
 
 CFLAGS=-c -Wall -O2
 
-LDFLAGS=-L. -leegl -L. -lks -lgsl -lgslcblas -lm
+LDFLAGS=-L . -leegl
 
-eeglks:				$(OBJ)
-		$(CC) -Wall -O2 $(OBJ) -o eeglks $(LDFLAGS)
+geneegl:			$(OBJ)
+		$(CC) -Wall -O2 $(OBJ) -o geneegl $(LDFLAGS)
 
-eeglks.o:			eeglks.c
-		$(CC) $(CFLAGS) eeglks.c
+geneegl.o:			geneegl.c
+		$(CC) $(CFLAGS) geneegl.c
 
 clean:
-		rm -f $(OBJ) eeglks
+		rm -f $(OBJ) geneegl

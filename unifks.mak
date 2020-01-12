@@ -1,4 +1,4 @@
-#  eeglks.mak - Compile eeglks.c Version 0.1.0
+#  unifks.mak - Compile unifks.c Version 0.1.0
 #  Copyright (C) 2019-2020 aquila57 at github.com
 
 #  This program is free software; you can redistribute it and/or
@@ -26,7 +26,7 @@
 # to 64
 #--------------------------------------------------------
 
-OBJ=eeglks.o
+OBJ=unifks.o
 
 CC=gcc
 
@@ -34,11 +34,11 @@ CFLAGS=-c -Wall -O2
 
 LDFLAGS=-L. -leegl -L. -lks -lgsl -lgslcblas -lm
 
-eeglks:				$(OBJ)
-		$(CC) -Wall -O2 $(OBJ) -o eeglks $(LDFLAGS)
+unifks:				$(OBJ)
+		$(CC) -Wall -O2 $(OBJ) -o unifks $(LDFLAGS)
 
-eeglks.o:			eeglks.c
-		$(CC) $(CFLAGS) eeglks.c
+unifks.o:				unifks.c
+		$(CC) $(CFLAGS) unifks.c
 
 clean:
-		rm -f $(OBJ) eeglks
+		rm -f $(OBJ) unifks

@@ -1,5 +1,5 @@
 #  sineks.mak - Compile sineks.c Version 0.1.0
-#  Copyright (C) 2019 aquila57 at github.com
+#  Copyright (C) 2019-2020 aquila57 at github.com
 
 #  This program is free software; you can redistribute it and/or
 #  modify it under the terms of the GNU General Public License as
@@ -26,55 +26,19 @@
 # to 64
 #--------------------------------------------------------
 
-OBJ=sineks.o \
-	treeinit.o \
-	isrt.o \
-	rmtree.o \
-	traverse.o \
-	freeall.o \
-	eeglinit.o \
-	eegl.o \
-	eeglpwr.o \
-	eeglfrac.o
+OBJ=sineks.o
 
 CC=gcc
 
 CFLAGS=-c -Wall -O2
 
-LDFLAGS=-lgsl -lgslcblas -lm
+LDFLAGS=-L. -leegl -L. -lks -lgsl -lgslcblas -lm
 
 sineks:				$(OBJ)
 		$(CC) -Wall -O2 $(OBJ) -o sineks $(LDFLAGS)
 
 sineks.o:				sineks.c
 		$(CC) $(CFLAGS) sineks.c
-
-treeinit.o:			treeinit.c
-		$(CC) $(CFLAGS) treeinit.c
-
-isrt.o:				isrt.c
-		$(CC) $(CFLAGS) isrt.c
-
-rmtree.o:			rmtree.c
-		$(CC) $(CFLAGS) rmtree.c
-
-traverse.o:			traverse.c
-		$(CC) $(CFLAGS) traverse.c
-
-freeall.o:			freeall.c
-		$(CC) $(CFLAGS) freeall.c
-
-eeglinit.o:			eeglinit.c
-		$(CC) $(CFLAGS) eeglinit.c
-
-eegl.o:				eegl.c
-		$(CC) $(CFLAGS) eegl.c
-
-eeglpwr.o:			eeglpwr.c
-		$(CC) $(CFLAGS) eeglpwr.c
-
-eeglfrac.o:			eeglfrac.c
-		$(CC) $(CFLAGS) eeglfrac.c
 
 clean:
 		rm -f $(OBJ) sineks

@@ -1,4 +1,6 @@
 #!/bin/bash
+make -f eegllib.mak clean
+make -f libks.mak clean
 make -f eeglks.mak clean
 make -f srandks.mak clean
 make -f fiboks.mak clean

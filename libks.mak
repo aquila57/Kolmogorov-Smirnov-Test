@@ -1,5 +1,5 @@
-#  eeglks.mak - Compile eeglks.c Version 0.1.0
-#  Copyright (C) 2019-2020 aquila57 at github.com
+#  libks.mak - Compile KS test library Version 0.1.0
+#  Copyright (C) 2020 aquila57 at github.com
 
 #  This program is free software; you can redistribute it and/or
 #  modify it under the terms of the GNU General Public License as
@@ -18,27 +18,50 @@
    #  59 Temple Place - Suite 330
    #  Boston, MA 02111-1307, USA.
 
-#--------------------------------------------------------
-# The LFSR in this generator comes from the following
-# http://courses.cse.tamu.edu/walker/csce680/
-# lfsr_table.pdf
-# 64 bit LFSR is 64,63,61,60 with low order bit equal
-# to 64
-#--------------------------------------------------------
-
-OBJ=eeglks.o
+OBJ=treeinit.o \
+	isrt.o \
+	rmtree.o \
+	traverse.o \
+	freeall.o \
+	getdie.o \
+	bld_maxint.o \
+	bld_rngtbl.o
 
 CC=gcc
 
+AR=ar
+
 CFLAGS=-c -Wall -O2
 
-LDFLAGS=-L. -leegl -L. -lks -lgsl -lgslcblas -lm
+LDFLAGS=
 
-eeglks:				$(OBJ)
-		$(CC) -Wall -O2 $(OBJ) -o eeglks $(LDFLAGS)
+libks.a:			$(OBJ)
+		rm -f libks.a
+		$(AR) r libks.a $(OBJ)
 
-eeglks.o:			eeglks.c
-		$(CC) $(CFLAGS) eeglks.c
+treeinit.o:			treeinit.c
+		$(CC) $(CFLAGS) treeinit.c
+
+isrt.o:				isrt.c
+		$(CC) $(CFLAGS) isrt.c
+
+rmtree.o:			rmtree.c
+		$(CC) $(CFLAGS) rmtree.c
+
+traverse.o:			traverse.c
+		$(CC) $(CFLAGS) traverse.c
+
+freeall.o:			freeall.c
+		$(CC) $(CFLAGS) freeall.c
+
+getdie.o:			getdie.c
+		$(CC) $(CFLAGS) getdie.c
+
+bld_maxint.o:			bld_maxint.c
+		$(CC) $(CFLAGS) bld_maxint.c
+
+bld_rngtbl.o:			bld_rngtbl.c
+		$(CC) $(CFLAGS) bld_rngtbl.c
 
 clean:
-		rm -f $(OBJ) eeglks
+		rm -f $(OBJ) libks.a
