@@ -28,5 +28,5 @@ To de-install the runs test up and down repository:
 
 ./deinst.sh
 
-To see how to test runs test programs, read TESTING.
+To see how to run Kolmogorov-Smirnov tests, read TESTING.
 
