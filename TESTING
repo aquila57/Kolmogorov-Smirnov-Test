@@ -14,6 +14,19 @@ This test is expected to pass the Kolmogorov-Smirnov test.
 
 --------
 
+etaus random number generator
+
+Run etausks to apply the Kolmogorov-Smirnov test for the
+etaus uniform random number generator.  There is no
+parameter.  See the template test repository for information
+about the etaus generator.
+
+./etausks
+
+This test is expected to pass the Kolmogorov-Smirnov test.
+
+--------
+
 Knuth subrand generator
 
 Run srandks to apply the Kolmogorov-Smirnov test for the
