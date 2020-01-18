@@ -8,6 +8,7 @@
 #include <gsl/gsl_sf_erf.h>
 #include <gsl/gsl_rng.h>
 #include "eegl.h"
+#include "etaus.h"
 
 #define SMPLS (1000000)
 
@@ -67,6 +68,7 @@ typedef struct xxstruct {
    double maxint_tbl[2048];
    treefmt *root;
    eefmt *ee;
+   etfmt *et;
    gsl_rng_type *gsltype;
    gsl_rng *rng;
    } xxfmt;
