@@ -28,8 +28,13 @@ void traverse(treefmt *node, xxfmt *xx)
    double diff;
    if (node->left != NULL) traverse(node->left, xx);
    /**********************************************/
-   diff = node->num - xx->sumx;
-   if (diff > xx->maxdiff) xx->maxdiff = diff;
+   if (xx->sumx > 0.0)
+      {
+      diff = fabs(node->num - xx->sumx);
+      if (diff > xx->maxdiff) xx->maxdiff = diff;
+      diff = fabs(node->num - (xx->sumx - xx->deltax));
+      if (diff > xx->maxdiff) xx->maxdiff = diff;
+      } /* if sumx>0 */
    xx->sumx += xx->deltax;
    /**********************************************/
    if (node->rght != NULL) traverse(node->rght, xx);

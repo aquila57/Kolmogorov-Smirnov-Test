@@ -157,12 +157,17 @@ fraction is a strong random number with a uniform distribution
 ranging from zero to one.
 
 The following GSL generators fail the Kolmogorov-Smirnov test.
+Many of the same generators also fail in the dieharder tests below.
 
 knuthran
 
 knuthran2002
 
+mrg
+
 ran3
+
+"random" family of generators
 
 ranlux
 
@@ -179,25 +184,6 @@ ranmar
 uni
 
 zuf
-
-The random*-* family of generators perform poorly in the KS test.
-
-Other GSL generators, which fail the KS Test more often than
-expected, are:
-
-cmrg
-
-mrg
-
-mt19937
-
-mt19937_1998
-
-r250
-
-ran2
-
-uni32
 
 ----------------
 
@@ -231,8 +217,13 @@ tstdie.sh 053
 
 This runs the test using the taus2 generator from dieharder.
 
-The following dieharder generators fail the Kolmogorov=Smirnov
-test.
+The following dieharder generators have failed the Kolmogorov=Smirnov
+test.  In any test, some of the generators listed below may or may
+not pass the test.  For example, cmrg has passed some tests and
+failed others.  The "random" family of generators perform badly
+in this test, taken as a group.  Individual generators in this
+group may sometimes pass the test.  Many of the generators below
+also fail the GSL tests above.
 
 Gen Name
 
@@ -242,17 +233,29 @@ Gen Name
 
 007 knuthran
 
-014 mt19937_1999
+009 knuthran2002
+
+012 mrg
 
 020 ran3
 
-023 random128-bsd
-
-024 random128-glibc2
+025 random128-libc5
 
 026 random256-bsd
 
-028 random256-libc5
+029 random32-bsd
+
+030 random32-glibc2
+
+032 random64-bsd
+
+033 random64-glibc2
+
+034 random64-libc5
+
+038 random-bsd
+
+039 random-glibc2
 
 040 random-libc5
 
@@ -274,9 +277,9 @@ Gen Name
 
 205 AES_OFB
 
-206 Threefish_OFB
-
 207 XOR abort
+
+209 superkiss
 
 404 R_knuth_taocp
 

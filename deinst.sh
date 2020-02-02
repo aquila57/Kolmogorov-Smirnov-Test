@@ -11,4 +11,4 @@ make -f sineks.mak clean
 make -f randuks.mak clean
 make -f gslks.mak clean
 make -f dieks.mak clean
-rm -f allgsl.out
+rm -f allgsl.out alldie.out
